@@ -1,0 +1,325 @@
+*,*::before,*::after{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Display', san-serif;
+
+}
+
+:root{
+    --colorDark1:#2c3338;
+    --colorBlur:#2c33389c;
+    --colorDark2:#1D2327;
+    --colorShadow:#3c434a;
+    --colorLight1:#c5d9ed;
+    --colorLight2: #DBE2EF;
+    --colorLight3: #F9F7F7;
+}
+
+.wrapper{
+    width:100vw;
+    height:100vh;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    background-image: url(./assets/paul-pastourmatzis-KT3WlrL_bsg-unsplash.jpg) ;
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+h1{
+   text-align: center; 
+   font-size: 34px;
+   text-transform:uppercase;
+   padding: 20px 0px; 
+   font-weight: 900;
+   color:var(--colorDark2);
+   text-shadow: 0px 0px 2px var(--colorDark1);
+   box-shadow: 0px 0px 200px var(--colorDark2);
+   border:2px solid #1D2327;
+   border-radius: 20px;
+   margin: 2px 2px;
+}
+
+
+
+.tab_container{
+    width: 90%;
+    display: flex;
+    max-width:550px;
+    justify-content:space-between;
+    margin:0 auto ;
+    margin-top: 3rem;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 0.875rem;
+    letter-spacing:1.75px;
+    padding: 5px 8px;
+    color:var(--colorDark2);
+    font-weight: bolder;
+    text-shadow: 0px 0px 1px var(--colorDark1);
+
+}
+
+.current_tab{
+     background-color:var(--colorLight1) ;
+     border-radius:4px;
+}
+
+
+.weather_container{
+
+    margin-block: 3rem;
+}
+
+.btn{
+    all: unset;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark1);
+    color: var(--colorLight3);
+    padding: 10px 30px;
+    cursor:pointer;
+    text-shadow: 0px 0px 2px var(--colorLight3);
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    color: var(--colorDark1);
+    background-color: var(--colorLight3);
+    text-shadow: 0px 0px 2px var(--colorDark1);
+    transform: scale(1.2);
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.grant_locationcontainer{
+    display: none;
+}
+
+.grant_locationcontainer img{
+    margin-bottom: 1rem;
+    animation: scaleImg;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scaleImg {
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.2);
+    }
+    100%{
+        transform:rotateX(1)
+    }
+    
+}
+
+.grant_locationcontainer p:first-of-type{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--colorDark2);
+    text-shadow: 0px 0px 1px var(--colorDark2);
+    perspective: 100px;
+}
+
+.grant_locationcontainer p:last-of-type{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    color: var(--colorLight2);
+    text-shadow: 0px 0px 1px var(--colorLight2);
+}
+
+
+
+
+
+
+.userinfo_container{
+    margin: auto;
+    padding: 3rem 3rem;
+    width: 90%;
+    max-width:550px;
+    display: none;
+    color:var(--colorLight3);
+    background-color: var(--colorBlur);
+    border-radius: 2rem;
+    font-family: 'Merriweather Sans',sans-serif;
+
+    
+}
+
+.userinfo_container p[data_weather_Description]{
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-shadow: 0px 0px 1px var(--colorLight3);
+} 
+
+.userinfo_container img{
+    width: 90px;
+    height: 90px;
+}
+
+.userinfo_container p[data_weather_Temp]{
+   font-size: 2rem;
+   font-weight: 700;
+   text-shadow: 0px 0px 3px var(--colorLight2); 
+}
+
+.name{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+}
+.name p{
+    font-size: 1.8rem;
+    text-shadow: 0px 0px 1px var(--colorLight3);
+}
+
+.name img{
+    width: 20px;
+    height: 20px;
+}
+
+.parameter-container{
+    width: 100%;
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.parameter{
+    width: 35%;
+    /* max-width: 250px; */
+    background-color: #c5d9ed8e;
+    border-radius:5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px 0;
+    color: var(--colorDark2);
+    font-weight: 500;
+    text-align: center;
+
+}
+
+.parameter img{
+    width: 50px;
+    height: 50px;
+}
+
+.parameter:hover{
+    background-color: #f9f7f7e5;
+}
+
+.parameter p:first-of-type{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+
+.loading-container{
+    display: none;
+}
+
+.loading-container p{
+    text-transform: uppercase;
+    font-size:1.2rem;
+    color: var(--colorLight2);
+    text-shadow: 0px 0px 1px var(--colorLight2);
+}
+
+.form_container{
+    width: 90%;
+    max-width: 550px;
+    margin:0 auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.form_container input{
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color:var(--colorBlur) ;
+    border-radius: 10px;
+    color: #F9F7F7;
+}
+
+.form_container input::placeholder{
+    color: var(--colorLight2);
+}
+
+.form_container input:focus{
+    outline: 3px solid var(--colorLight2);
+}
+
+.button{
+    all: unset;
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: var(--colorDark1);
+}
+
+.error_image{
+    display:none;
+    margin:auto;
+    width: 90%;
+    max-width: 550px;
+    justify-content:  center;
+    align-items: center;
+    padding: 100px;
+    background-color: var(--colorBlur);
+    border-radius:2rem;
+}
+
+.active{
+    display: flex;
+}
+
+.bgactive{
+    background-image: url(./assets/pic5.jpg);
+}
+
+@media (max-width) {
+    .userinfo_container{
+        padding: 1rem 1rem;
+    }
+}
+
+
+
